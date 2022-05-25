@@ -15,4 +15,18 @@ async function getGoups() {
     await conn?.end();
   }
 }
-module.exports = { getGoups };
+async function postGoups(name) {
+  let conn;
+  try {
+    conn = await mysql.createConnection(dbConfig);
+
+    const sql = 'INSERT INTO groups(name) VALUES (?)';
+    const [result] = await conn.execute(sql, [name]);
+    return result;
+  } catch (error) {
+    throw error.message;
+  } finally {
+    await conn?.end();
+  }
+}
+module.exports = { getGoups, postGoups };

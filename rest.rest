@@ -47,3 +47,11 @@ GET  http://localhost:3000/groups HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzUwMjY0NSwiZXhwIjoxNjUzNTA2MjQ1fQ.BgpCJU5vJq_jwtzgZjHEHSQgKhV7Ya3IA3-dNcsjDBM
 
 ###
+POST http://localhost:3000/groups HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzUwMjY0NSwiZXhwIjoxNjUzNTA2MjQ1fQ.BgpCJU5vJq_jwtzgZjHEHSQgKhV7Ya3IA3-dNcsjDBM
+Content-Type: application/json
+
+{
+    "name":"Trip to Klaipeda"
+}
+###
