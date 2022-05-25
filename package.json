@@ -1,0 +1,22 @@
+{
+  "name": "nodejs---mysql-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MantvydasDirgincius/NodeJS_MySQL_Exam_Mantvydas_Dirgincius.git"
+  },
+  "author": "Mantvydas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MantvydasDirgincius/NodeJS_MySQL_Exam_Mantvydas_Dirgincius/issues"
+  },
+  "homepage": "https://github.com/MantvydasDirgincius/NodeJS_MySQL_Exam_Mantvydas_Dirgincius#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
