@@ -5,6 +5,7 @@ const { PORT } = require('./config');
 const userRoutes = require('./routes/userRoutes');
 const accountsRoutes = require('./routes/accountsRoutes');
 const billsRoutes = require('./routes/billRoutes');
+const groupRoutes = require('./routes/groupRoutes');
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.get('/', (req, res) => {
 app.use('/', userRoutes);
 app.use('/', accountsRoutes);
 app.use('/', billsRoutes);
+app.use('/', groupRoutes);
 
 app.listen(PORT, () => console.log('serveris veikia', PORT));

@@ -6,7 +6,7 @@ async function getBills(id) {
   try {
     conn = await mysql.createConnection(dbConfig);
 
-    const sql = 'SELECT * FROM `bills` WHERE group_id = ?';
+    const sql = 'SELECT * FROM bills WHERE group_id = ?';
     const [result] = await conn.execute(sql, [id]);
     return result;
   } catch (error) {
