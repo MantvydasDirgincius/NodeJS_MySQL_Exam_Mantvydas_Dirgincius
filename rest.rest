@@ -16,3 +16,16 @@ Content-Type: application/json
     "password": "test2"
    
 }
+###
+GET http://localhost:3000/accounts HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+
+###
+POST http://localhost:3000/accounts HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Content-Type: application/json
+
+{
+    "groupId":2
+}
+###
