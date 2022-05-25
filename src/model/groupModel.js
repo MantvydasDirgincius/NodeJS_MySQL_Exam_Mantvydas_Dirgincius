@@ -1,13 +1,13 @@
 const mysql = require('mysql2/promise');
 const { dbConfig } = require('../config');
 
-async function getBills(id) {
+async function getGoups() {
   let conn;
   try {
     conn = await mysql.createConnection(dbConfig);
 
-    const sql = 'SELECT * FROM bills WHERE group_id = ?';
-    const [result] = await conn.execute(sql, [id]);
+    const sql = 'SELECT * FROM groups ';
+    const [result] = await conn.execute(sql);
     return result;
   } catch (error) {
     throw error.message;
@@ -15,13 +15,13 @@ async function getBills(id) {
     await conn?.end();
   }
 }
-async function postBills(groupId, amount, description) {
+async function postGoups(name) {
   let conn;
   try {
     conn = await mysql.createConnection(dbConfig);
 
-    const sql = 'INSERT INTO bills( group_id, amount, description) VALUES(?,?,?)';
-    const [result] = await conn.execute(sql, [groupId, amount, description]);
+    const sql = 'INSERT INTO groups(name) VALUES (?)';
+    const [result] = await conn.execute(sql, [name]);
     return result;
   } catch (error) {
     throw error.message;
@@ -29,4 +29,4 @@ async function postBills(groupId, amount, description) {
     await conn?.end();
   }
 }
-module.exports = { getBills, postBills };
+module.exports = { getGoups, postGoups };
