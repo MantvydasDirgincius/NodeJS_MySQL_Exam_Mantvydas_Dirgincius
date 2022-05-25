@@ -1,12 +1,15 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
-const { validateUser } = require('../middlewere');
-const { addUserToDb } = require('../model/userModel');
+const { addUserToDb, findUserByEmail } = require('../model/userModel');
+
+const { validateUserRegistracion, validateUserLogin } = require('../middlewere');
+const { jwtSecret } = require('../config');
 
 const userRoutes = express.Router();
 
-userRoutes.post('/registration', validateUser, async (req, res) => {
+userRoutes.post('/registration', validateUserRegistracion, async (req, res) => {
   try {
     const { email, password, name } = req.body;
     const hashedPassword = bcrypt.hashSync(password, 10);
@@ -22,5 +25,24 @@ userRoutes.post('/registration', validateUser, async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, msg: error });
   }
+});
+
+userRoutes.post('/login', validateUserLogin, async (req, res) => {
+  const { email, password } = req.body;
+
+  const [foundUser] = await findUserByEmail(email);
+
+  if (!foundUser) {
+    res.status(400).json({ success: false, msg: 'email or password not found' });
+    return;
+  }
+  if (!bcrypt.compareSync(password, foundUser.password)) {
+    res.status(400).json({ success: false, msg: 'email or password not found' });
+    return;
+  }
+  const paylod = { userId: foundUser.id };
+  const token = jwt.sign(paylod, jwtSecret, { expiresIn: '1h' });
+  // eslint-disable-next-line object-curly-newline
+  res.json({ success: true, msg: 'login success', token, paylod });
 });
 module.exports = userRoutes;
