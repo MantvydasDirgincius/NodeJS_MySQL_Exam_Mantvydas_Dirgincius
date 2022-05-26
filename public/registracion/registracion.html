@@ -27,7 +27,7 @@
         /></a>
         <nav class="navbar">
           <a href="../login/index.html">Login</a>
-          <a href="../registracion/registracion.html">Registracion</a>
+          <a href="../registracion/registracion.html" class="active">Registracion</a>
         </nav>
       </div>
     </header>
@@ -41,17 +41,25 @@
       <p>BEST IN MARKET</p>
     </main>
     <form class="form container">
-      <h2>Login</h2>
+      <h2>Registracion</h2>
+      <label for="full_name">Full Name</label>
+      <input type="text" id="full_name" name="full_name" placeholder="Type your full name" />
       <label for="email">Email</label>
       <input type="text" id="email" name="email" placeholder="Type your email address" />
       <span class="errorSpan"></span>
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Type your password" />
       <span class="errorSpan"></span>
-      <button type="submit">Log in</button>
-      <p class="newAcc">
-        Don't have an account? <a href="../registracion/registracion.html">Register</a>
-      </p>
+      <label for="repPassword">Repeat Password</label>
+      <input
+        type="password"
+        id="repPassword"
+        name="repPassword"
+        placeholder="Repeat your password"
+      />
+      <span class="errorSpan"></span>
+      <button type="submit">Register</button>
+      <p class="newAcc">Or perhaps, just <a href="../registracion/registracion.html">login</a> ?</p>
     </form>
   </body>
 </html>
