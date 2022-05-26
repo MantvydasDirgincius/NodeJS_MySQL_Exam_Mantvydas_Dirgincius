@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 img {
   max-width: 100%;
@@ -21,6 +21,7 @@ img {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  padding: 0 15px;
 }
 .headerImg {
   margin-top: 5px;
@@ -65,9 +66,10 @@ img {
 }
 /* form */
 .form {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
+  padding: 0 15px;
 }
 .form label {
   font-size: 18px;

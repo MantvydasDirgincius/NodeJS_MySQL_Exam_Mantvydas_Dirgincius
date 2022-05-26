@@ -67,92 +67,58 @@ img {
   color: rgb(199, 199, 199);
   margin-top: 0;
 }
-/* grid section */
-.cardContainer {
-  margin-bottom: 40px;
-}
-.title {
+/* table container */
+
+.tableContainer {
+  width: 100%;
   text-align: center;
+}
+.tableContainer h2 {
+  color: #ff9090;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}
+.tableContainer h3 {
+  margin-top: 0;
   font-weight: 500;
   font-size: 20px;
 }
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 30px;
+.table {
+  border-collapse: collapse;
+  width: 100%;
 }
-.card {
-  border: 1px solid rgb(199, 199, 199);
-  text-align: center;
-  padding: 30px;
-  border-radius: 5px;
+.table td,
+.table th {
+  text-align: left;
+  padding: 20px;
 }
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.card p {
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: rgb(169, 169, 169);
-  font-weight: 300;
+.table tr:nth-child(even) {
+  background-color: #dddddd;
 }
 /* form */
-.forms {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.selectForm {
-  margin-top: auto;
-  margin-bottom: 50px;
+.form {
+  margin: 50px auto;
   width: 300px;
   display: flex;
   flex-direction: column;
 }
-.selectForm label {
+.form label {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 4px;
 }
-.selectForm h3 {
+.form h3 {
   font-weight: 600;
   font-size: 20px;
 }
-.selectForm select {
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(169, 169, 169);
-}
-.selectForm button {
-  width: 50px;
-  padding: 4px 8px;
-  border: 2px black solid;
-  background-color: #fff;
-}
-.newGroupForm {
-  margin-top: auto;
-  margin-bottom: 50px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-}
-.newGroupForm label {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.newGroupForm h3 {
-  font-weight: 600;
-  font-size: 20px;
-}
-.newGroupForm input {
+.form input {
   padding: 5px;
   margin-bottom: 20px;
   border: 1px solid rgb(169, 169, 169);
 }
 
-.newGroupForm button {
+.form button {
   width: 50px;
   padding: 4px 8px;
   border: 2px black solid;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Groups</title>
+    <title>Bills</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -13,8 +13,8 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./group.js" defer></script>
-    <link rel="stylesheet" href="./group.css" />
+    <script src="./bills.js" defer></script>
+    <link rel="stylesheet" href="./bills.css" />
   </head>
   <body>
     <header class="header">
@@ -26,6 +26,7 @@
             alt="google logo"
         /></a>
         <nav class="navbar">
+          <a href="../group/group.html">Groups</a>
           <a href="../login/index.html">Sign out</a>
         </nav>
       </div>
@@ -38,37 +39,35 @@
       />
       <h1>Split Bill</h1>
     </main>
-    <section class="cardContainer container">
-      <h2 class="title">Select Your Group</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>ID:1</h3>
-          <p>Our trip SF</p>
-        </div>
-        <div class="card">
-          <h3>ID:1</h3>
-          <p>Our trip SF</p>
-        </div>
-        <div class="card">
-          <h3>ID:1</h3>
-          <p>Our trip SF</p>
-        </div>
-      </div>
+    <section class="tableContainer container">
+      <h2>Trip to Spain</h2>
+      <h3>Group's bills:</h3>
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>For peaper</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>for car</td>
+          <td>30</td>
+        </tr>
+      </table>
     </section>
-    <section class="forms container">
-      <form class="selectForm">
-        <h3>Add group</h3>
-        <label for="group">Group ID:</label>
-        <select name="group" id="group">
-          <option value="1">trip</option></select
-        ><button type="submit">Add</button>
-      </form>
-      <form class="newGroupForm">
-        <h3>Add new group</h3>
-        <label for="groupName">Group name</label>
-        <input type="text" id="groupName" name="groupName" placeholder="Type your new group name" />
-        <button type="submit">Add</button>
-      </form>
-    </section>
+
+    <form class="form">
+      <h3>Add new bill</h3>
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" name="amount" placeholder="amount" />
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" placeholder="Description" />
+      <button type="submit">Add</button>
+    </form>
   </body>
 </html>
