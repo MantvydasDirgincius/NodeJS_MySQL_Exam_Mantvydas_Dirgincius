@@ -30,11 +30,11 @@ Content-Type: application/json
 }
 ###
 GET  http://localhost:3000/bill/1 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzU1NDA1NywiZXhwIjoxNjUzNTU3NjU3fQ.8hcBwhQ2WHmhYlYpigIfn7gIWpt4mx34AUvxsH8NbHM
 
 ###
 POST   http://localhost:3000/bill HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzU1NDA1NywiZXhwIjoxNjUzNTU3NjU3fQ.8hcBwhQ2WHmhYlYpigIfn7gIWpt4mx34AUvxsH8NbHM
 Content-Type: application/json
 
 {
