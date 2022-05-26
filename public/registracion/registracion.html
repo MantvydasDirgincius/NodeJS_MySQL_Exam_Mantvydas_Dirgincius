@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./registracion.js" defer></script>
+    <script type="module" src="./registracion.js" defer></script>
     <link rel="stylesheet" href="./registracion.css" />
   </head>
   <body>
@@ -42,8 +42,10 @@
     </main>
     <form class="form container">
       <h2>Registracion</h2>
+      <h3 class="err"></h3>
       <label for="full_name">Full Name</label>
       <input type="text" id="full_name" name="full_name" placeholder="Type your full name" />
+      <span class="errorSpan"></span>
       <label for="email">Email</label>
       <input type="text" id="email" name="email" placeholder="Type your email address" />
       <span class="errorSpan"></span>
