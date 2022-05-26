@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registracion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./registracion.css" defer></script>
+    <link rel="stylesheet" href="./registracion.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerDiv container">
+        <a href="../login/index.html"
+          ><img
+            class="headerImg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
+            alt="google logo"
+        /></a>
+        <nav class="navbar">
+          <a href="../login/index.html">Login</a>
+          <a href="../registracion/registracion.html">Registracion</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main container">
+      <img
+        class="mainLogo"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
+        alt="google logo"
+      />
+      <h1>Split Bill</h1>
+      <p>BEST IN MARKET</p>
+    </main>
+    <form class="form container">
+      <h2>Login</h2>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Type your email address" />
+      <span class="errorSpan"></span>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Type your password" />
+      <span class="errorSpan"></span>
+      <button type="submit">Log in</button>
+      <p class="newAcc">
+        Don't have an account? <a href="../registracion/registracion.html">Register</a>
+      </p>
+    </form>
+  </body>
+</html>
