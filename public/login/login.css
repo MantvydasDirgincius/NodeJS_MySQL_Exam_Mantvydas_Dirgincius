@@ -89,3 +89,13 @@ img {
 .newAcc a {
   text-decoration: none;
 }
+/* err */
+.errorSpan {
+  color: tomato;
+  margin-top: 0;
+}
+
+.invalid-input {
+  border: 1px solid tomato;
+  background-color: #ffcfc7;
+}
