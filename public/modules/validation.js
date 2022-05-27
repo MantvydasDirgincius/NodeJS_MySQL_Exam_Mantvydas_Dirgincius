@@ -14,7 +14,7 @@ function addError(message, field) {
 
 function checkRequired(value, field) {
   if (value === '') {
-    addError('this field is required', field);
+    addError('This field is required', field);
     return true;
   }
   return false;
@@ -22,12 +22,12 @@ function checkRequired(value, field) {
 
 function checkMinLength(value, minLength, field) {
   if (value.length <= minLength) {
-    addError(`length must be greater than ${minLength}`, field);
+    addError(`Length must be greater than ${minLength}`, field);
   }
 }
 function checkFullName(value, field) {
   if (!value.includes(' ')) {
-    addError('must contain first name and last name', field);
+    addError('Must contain first name and last name', field);
     return false;
   }
   return true;
@@ -56,7 +56,7 @@ export function checkInput(valueToCheck, field, rulesArr) {
     }
     if (rule === 'positive') {
       if (valueToCheck < 0) {
-        addError('must be positive', field);
+        addError('Must be positive', field);
         return;
       }
     }

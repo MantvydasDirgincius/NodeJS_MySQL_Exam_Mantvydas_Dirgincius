@@ -23,7 +23,7 @@ function clearErrors() {
 }
 function handleError(msg) {
   errSpanEl.textContent = '';
-  if (msg === "Duplicate entry 'test@test.com' for key 'email'") {
+  if (msg === false) {
     // eslint-disable-next-line no-param-reassign
     msg = 'This email is already in use by another user';
     errh3El.textContent = msg;
@@ -109,6 +109,7 @@ formEl.addEventListener('submit', async (e) => {
       window.location.replace('../login/index.html');
     }
   } catch (error) {
-    handleError(error.response.data.msg);
+    console.log('error ===', error);
+    handleError(error.response.data.success);
   }
 });
