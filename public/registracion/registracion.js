@@ -85,7 +85,7 @@ formEl.addEventListener('submit', async (e) => {
   checkInput(logInInfo.email, 'email', ['required', 'minLength-4', 'email']);
   checkInput(logInInfo.password, 'password', ['required', 'minLength-4', 'maxLength-10']);
   checkInput(repPasswordInpEl.value, 'repPassword', ['required', 'minLength-4', 'maxLength-10']);
-  checkInput(fullNameInpEl.value, 'full_name', ['required', 'minLength-4']);
+  checkInput(fullNameInpEl.value, 'full_name', ['required', 'minLength-4', 'fullName']);
   if (errorsArr.length) {
     handleError(errorsArr);
     return;
