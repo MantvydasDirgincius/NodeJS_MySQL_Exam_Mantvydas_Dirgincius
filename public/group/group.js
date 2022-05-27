@@ -4,7 +4,7 @@ const token = localStorage.getItem('userToken');
 if (!token) {
   window.location.replace('../login/index.html');
 }
-
+const signOutEl = document.getElementById('signOut');
 const gridEl = document.querySelector('.grid');
 const errorEl = document.querySelector('.error');
 const BASE_URL = 'http://localhost:3000';
@@ -13,6 +13,11 @@ const inpEl = document.getElementById('groupName');
 const selectFormEl = document.querySelector('.selectForm');
 const selectgroupEl = document.getElementById('group');
 
+signOutEl.addEventListener('click', () => {
+  localStorage.removeItem('userToken');
+  localStorage.removeItem('userId');
+});
+// getting accounts ========================================================
 function createCard(id, name) {
   const cardEl = document.createElement('div');
   cardEl.className = 'card';
@@ -45,12 +50,12 @@ async function getAcounts(endpoint) {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(data);
     generateCard(gridEl, data.data);
   } catch (error) {
     errorEl.textContent = 'something went wrong';
   }
 }
+// gen option=========================================================
 function generateOptions(dest, arr) {
   // eslint-disable-next-line no-param-reassign
   dest.innerHTML = '';
@@ -82,6 +87,7 @@ async function getGroups(endpoint, dest) {
     console.log('something went wrong');
   }
 }
+// add newgroup =======================================================
 newGroupFormEl.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -89,7 +95,7 @@ newGroupFormEl.addEventListener('submit', async (e) => {
     // eslint-disable-next-line no-undef
     const { data } = await axios.post(
       `${BASE_URL}/groups`,
-      { name: inpEl.value.trim() },
+      { name: inpEl.value },
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -110,7 +116,7 @@ newGroupFormEl.addEventListener('submit', async (e) => {
     alert('something went wrong');
   }
 });
-
+// add accounts ===================================================================
 selectFormEl.addEventListener('submit', async (e) => {
   e.preventDefault();
   try {

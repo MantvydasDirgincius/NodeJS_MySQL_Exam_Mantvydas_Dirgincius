@@ -6,6 +6,7 @@ const token = localStorage.getItem('userToken');
 if (!token) {
   window.location.replace('../login/index.html');
 }
+const signOutEl = document.getElementById('signOut');
 const BASE_URL = 'http://localhost:3000';
 const groupsId = window.location.search.split('=')[1];
 const errorEl = document.querySelector('.error');
@@ -13,6 +14,11 @@ const tableEl = document.querySelector('.table');
 const formEl = document.forms[0];
 const amountInpEl = formEl.elements.amount;
 const descriptionInpEl = formEl.elements.description;
+
+signOutEl.addEventListener('click', () => {
+  localStorage.removeItem('userToken');
+  localStorage.removeItem('userId');
+});
 async function getAcounts(endpoint) {
   try {
     // eslint-disable-next-line no-undef
