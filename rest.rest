@@ -44,7 +44,7 @@ Content-Type: application/json
 }
 ###
 GET  http://localhost:3000/groups HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzMDg5NiwiZXhwIjoxNjUzNjM0NDk2fQ.zdm1M0H-Q_jlDtd7Vl3iGPtXHZXlAQc0fYYoAXlk8V8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzNzA5NCwiZXhwIjoxNjUzNjQwNjk0fQ.hyuCNg84WUFTr2G91A-jCvs21gDpo2_a5jHN69T_ZkM
 
 ###
 POST http://localhost:3000/groups HTTP/1.1
