@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* header */
+.header {
+  height: 50px;
+  background-color: rgb(230, 230, 230);
+  margin-bottom: 20px;
+}
+.headerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.headerImg {
+  margin-top: 5px;
+  width: auto;
+  height: 40px;
+}
+.navbar a {
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+}
+.navbar a:hover {
+  text-decoration: underline;
+  background-color: rgb(223, 223, 223);
+}
+
+/* main */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainLogo {
+  height: 40px;
+  padding: 5px;
+  border: 1px rgb(230, 230, 230) solid;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.main h1 {
+  font-size: 18px;
+  color: rgb(148, 148, 148);
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.main p {
+  color: rgb(199, 199, 199);
+  margin-top: 0;
+}
+/* grid section */
+.cardContainer {
+  margin-bottom: 40px;
+}
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 30px;
+}
+.card {
+  border: 1px solid rgb(199, 199, 199);
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  min-height: 130px;
+}
+.card:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.card p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgb(169, 169, 169);
+  font-weight: 300;
+}
+/* form */
+.forms {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.selectForm {
+  margin-top: auto;
+  margin-bottom: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.selectForm label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.selectForm h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.selectForm select {
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(169, 169, 169);
+}
+.selectForm button {
+  width: 50px;
+  padding: 4px 8px;
+  border: 2px black solid;
+  background-color: #fff;
+}
+.newGroupForm {
+  margin-top: auto;
+  margin-bottom: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.newGroupForm label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.newGroupForm h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.newGroupForm input {
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(169, 169, 169);
+}
+
+.newGroupForm button {
+  width: 50px;
+  padding: 4px 8px;
+  border: 2px black solid;
+  background-color: #fff;
+}

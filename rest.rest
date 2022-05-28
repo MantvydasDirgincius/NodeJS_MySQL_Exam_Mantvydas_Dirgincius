@@ -2,7 +2,7 @@ POST http://localhost:3000/registration HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "test@example.com",
+    "email": "test33@example.com",
     "password": "test2",
     "name":"test Name"
 }
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:3000/accounts HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzMjE3MywiZXhwIjoxNjUzNjM1NzczfQ.CDzwl0pED5jMoUWqWqtA8Edd74qNtxiUMTifl_Jt6Uw
 
 ###
 POST http://localhost:3000/accounts HTTP/1.1
@@ -30,11 +30,11 @@ Content-Type: application/json
 }
 ###
 GET  http://localhost:3000/bill/1 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzU1NDA1NywiZXhwIjoxNjUzNTU3NjU3fQ.8hcBwhQ2WHmhYlYpigIfn7gIWpt4mx34AUvxsH8NbHM
 
 ###
 POST   http://localhost:3000/bill HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzQ5NDg0NSwiZXhwIjoxNjUzNDk4NDQ1fQ.N_7a9FHkUAaZ-Cqdepg0slxNDuBwuvK62Z3Kj5QRijg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzU1NDA1NywiZXhwIjoxNjUzNTU3NjU3fQ.8hcBwhQ2WHmhYlYpigIfn7gIWpt4mx34AUvxsH8NbHM
 Content-Type: application/json
 
 {
@@ -44,7 +44,7 @@ Content-Type: application/json
 }
 ###
 GET  http://localhost:3000/groups HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzUwMjY0NSwiZXhwIjoxNjUzNTA2MjQ1fQ.BgpCJU5vJq_jwtzgZjHEHSQgKhV7Ya3IA3-dNcsjDBM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzNzA5NCwiZXhwIjoxNjUzNjQwNjk0fQ.hyuCNg84WUFTr2G91A-jCvs21gDpo2_a5jHN69T_ZkM
 
 ###
 POST http://localhost:3000/groups HTTP/1.1
