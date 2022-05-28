@@ -17,7 +17,7 @@ async function validateUserRegistracion(req, res, next) {
     await schema.validateAsync(req.body, { abortEarly: false });
     next();
   } catch (error) {
-    console.log('validuojant erroras ===', error);
+    // console.log('validuojant erroras ===', error);
     res.status(400).json({ success: false, error: error.details });
   }
 }
@@ -33,7 +33,7 @@ async function validateUserLogin(req, res, next) {
     await schema.validateAsync(req.body, { abortEarly: false });
     next();
   } catch (error) {
-    console.log('validuojant erroras ===', error);
+    // console.log('validuojant erroras ===', error);
     res.status(400).json({ success: false, error: error.details });
   }
 }

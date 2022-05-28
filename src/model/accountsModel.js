@@ -27,7 +27,6 @@ async function postAccounts(groupId, userId) {
     const [result] = await conn.execute(sql, [groupId, userId]);
     return result;
   } catch (error) {
-    console.log('error ===', error);
     throw error.message;
   } finally {
     conn?.end();
